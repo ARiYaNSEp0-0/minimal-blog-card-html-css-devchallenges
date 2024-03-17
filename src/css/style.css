@@ -1,0 +1,159 @@
+/* ========= Font Face ========= */
+@font-face {
+  font-family: "SoraRegular";
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/Sora-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SoraBold";
+  font-weight: 700;
+  font-display: swap;
+  src: url("../assets/fonts/Sora-Bold.ttf") format("truetype");
+}
+
+/* ========= Reset ========= */
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+p,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* ========= Variables ========= */
+:root {
+  --clr-primary: #e6d6fc;
+  --clr-accent-500: #883ae1;
+  --clr-accent-900: #20293a;
+  --clr-neutral-100: #fff;
+  --clr-neutral-200: #fafaf9;
+  --clr-neutral-400: #e5eaf0;
+  --clr-neutral-900: #6c727f;
+
+  --ff-regular: "SoraRegular", sans-serif;
+  --ff-bold: "SoraBold", sans-serif;
+  --fs-title: 1.125rem;
+  --fs-body: 0.875rem;
+  --fs-small: 0.75rem;
+  --fs-tag: 0.625rem;
+
+  --spacer: 1rem;
+
+  --shadow: 0px 30px 100px 0px rgba(17, 23, 41, 0.05);
+
+  --radius: 10px;
+}
+
+/* ========= General ========= */
+body {
+  font-family: var(--ff-regular);
+  font-size: var(--fs-body);
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: var(--clr-neutral-200);
+  color: var(--clr-neutral-900);
+}
+
+/* ========= Utilities ========= */
+.flow-content > * + * {
+  margin-top: var(--spacer);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 0.35rem;
+}
+/* ========= Layout ========= */
+main {
+  padding: 164px 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* ========= Component ========= */
+.card {
+  max-width: 23rem;
+  padding: 1rem 1rem 1.25rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  background-color: var(--clr-neutral-100);
+  position: relative;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: calc(100% - 3.5rem);
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: var(--clr-neutral-400);
+}
+
+.card__visual > img,
+.card__visual > .visual-element {
+  border-radius: var(--radius);
+  width: 100%;
+  max-height: 9.5rem;
+  object-fit: cover;
+}
+
+.card__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card__info > h1,
+.card__info > .title {
+  color: var(--clr-accent-900);
+  font-family: var(--ff-bold);
+  font-size: var(--fs-title);
+}
+
+.card__info > p,
+.card__info > .paragraph {
+  --spacer: 0.375rem;
+}
+
+.card__info > h2,
+.card__info > .sub-title {
+  font-weight: 400;
+  font-size: var(--fs-small);
+  --spacer: 40px;
+  /* --spacer: 1.25rem; */
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.375rem 1rem;
+  background-color: var(--tag-bg, var(--clr-primary));
+  color: var(--tag-fg, var(--clr-accent-500));
+  font-size: var(--fs-tag);
+  font-family: var(--ff-bold);
+  /* font-weight: bold; */
+  line-height: 1;
+  border-radius: 1rem;
+}
