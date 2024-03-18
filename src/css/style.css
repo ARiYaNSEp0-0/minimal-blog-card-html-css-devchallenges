@@ -1,16 +1,16 @@
 /* ========= Font Face ========= */
 @font-face {
-  font-family: "SoraRegular";
-  font-weight: 400;
+  font-family: "SoraLight";
+  font-weight: 300;
   font-display: swap;
-  src: url("../assets/fonts/Sora-Regular.ttf") format("truetype");
+  src: url("../assets/fonts/Sora-Light.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "SoraBold";
-  font-weight: 700;
+  font-family: "SoraSemiBold";
+  font-weight: 600;
   font-display: swap;
-  src: url("../assets/fonts/Sora-Bold.ttf") format("truetype");
+  src: url("../assets/fonts/Sora-SemiBold.ttf") format("truetype");
 }
 
 /* ========= Reset ========= */
@@ -51,8 +51,8 @@ body {
   --clr-neutral-400: #e5eaf0;
   --clr-neutral-900: #6c727f;
 
-  --ff-regular: "SoraRegular", sans-serif;
-  --ff-bold: "SoraBold", sans-serif;
+  --ff-serif: "SoraLight", sans-serif;
+  --ff-headings: "SoraSemiBold", sans-serif;
   --fs-title: 1.125rem;
   --fs-body: 0.875rem;
   --fs-small: 0.75rem;
@@ -67,7 +67,7 @@ body {
 
 /* ========= General ========= */
 body {
-  font-family: var(--ff-regular);
+  font-family: var(--ff-serif);
   font-size: var(--fs-body);
   font-weight: 400;
   line-height: 1.5;
@@ -106,7 +106,7 @@ main {
 .card::before {
   content: "";
   position: absolute;
-  top: calc(100% - 3.7rem);
+  top: calc(100% - 3.85rem);
   left: 0;
   height: 1px;
   width: 100%;
@@ -130,8 +130,8 @@ main {
 .card__info > h1,
 .card__info > .title {
   color: var(--clr-accent-900);
-  font-family: var(--ff-bold);
   font-size: var(--fs-title);
+  font-family: var(--ff-headings);
 }
 
 .card__info > p,
@@ -152,9 +152,8 @@ main {
   padding: 0.375rem 1rem;
   background-color: var(--tag-bg, var(--clr-primary));
   color: var(--tag-fg, var(--clr-accent-500));
+  font-family: var(--ff-headings);
   font-size: var(--fs-tag);
-  font-family: var(--ff-bold);
-  /* font-weight: bold; */
   line-height: 1;
   border-radius: 1rem;
 }
