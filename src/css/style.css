@@ -36,7 +36,7 @@ body {
   --clr-neutral-400: #e5eaf0;
   --clr-neutral-900: #6c727f;
 
-  --ff-serif: "Sora", sans-serif;
+  --ff-sans: "Sora", Verdana, sans-serif;
   --fs-title: 1.125rem;
   --fs-body: 0.875rem;
   --fs-small: 0.75rem;
@@ -51,7 +51,7 @@ body {
 
 /* ========= General ========= */
 body {
-  font-family: var(--ff-serif);
+  font-family: var(--ff-sans);
   font-size: var(--fs-body);
   font-weight: 300;
   line-height: 1.4;
@@ -134,7 +134,7 @@ main {
 .tag {
   font-weight: 600;
   display: inline-block;
-  padding: 0.345rem 1rem;
+  padding: 0.365rem 1rem;
   background-color: var(--tag-bg, var(--clr-primary));
   color: var(--tag-fg, var(--clr-accent-500));
   font-family: var(--ff-headings);
