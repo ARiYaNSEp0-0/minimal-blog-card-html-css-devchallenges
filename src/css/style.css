@@ -102,10 +102,11 @@ main {
   position: relative;
 }
 
+/* horizontal line on card */
 .card::before {
   content: "";
   position: absolute;
-  top: calc(100% - 3.5rem);
+  top: calc(100% - 3.7rem);
   left: 0;
   height: 1px;
   width: 100%;
