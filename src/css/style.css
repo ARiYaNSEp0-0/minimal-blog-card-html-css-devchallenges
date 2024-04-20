@@ -79,7 +79,7 @@ body {
   font-family: var(--ff-sans);
   font-size: var(--fs-body);
   font-weight: 300;
-  line-height: 1.6;
+  line-height: 1.4;
   background-color: var(--clr-neutral-200);
   color: var(--clr-neutral-900);
 }
@@ -138,7 +138,6 @@ main {
 .card__info > h1,
 .card__info > .title {
   font-weight: 600;
-  line-height: 1;
   color: var(--clr-accent-900);
   font-size: var(--fs-title);
 }
@@ -151,19 +150,18 @@ main {
 .card__info > h2,
 .card__info > .sub-title {
   --spacer: 2.625rem;
-  line-height: 1;
   font-weight: 400;
   font-size: var(--fs-small);
 }
 
 .tag {
   display: inline-block;
+  line-height: 1;
   padding: 0.35rem 1rem;
   background-color: var(--tag-bg, var(--clr-primary));
   color: var(--tag-fg, var(--clr-accent-500));
   font-family: var(--ff-headings);
   font-size: var(--fs-tag);
   font-weight: 600;
-  line-height: 1;
   border-radius: 0.7rem;
 }
